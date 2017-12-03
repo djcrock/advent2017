@@ -46,7 +46,6 @@ const getCoordinates = address => {
     return {x: 0, y: 0};
   }
   const {layer, maxAddress} = getLayer(address);
-  const minAddress = maxAddress - (layer * LAYER_SIZE_FACTOR) + 1
   const offset = maxAddress - address;
   const side = Math.trunc(offset / (layer * CORNER_TO_CORNER_FACTOR));
   const sideOffset = offset % (layer * CORNER_TO_CORNER_FACTOR);
